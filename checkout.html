@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Yeh! — freshly prepared food, bold flavours and convenient delivery."
+    />
+    <title>Your Cart | Yeh!</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <script src="js/script.js" defer></script>
+  </head>
+
+  <body>
+    <!-- Header and Navigation Section -->
+    <header class="site-header">
+      <div class="container nav-wrap flex items-center justify-between">
+        <a class="brand" href="index.html" aria-label="Yeh! home">
+          Yeh <span>!</span>
+        </a>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Open navigation"
+          aria-expanded="false"
+          aria-controls="main-navigation"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <nav
+          class="main-nav flex items-center"
+          id="main-navigation"
+          aria-label="Main navigation"
+        >
+          <a href="index.html">Home</a>
+          <a href="menu.html">Menu</a>
+          <a href="about.html">Our story</a>
+          <a href="contact.html">Contact</a>
+
+          <a class="nav-cart active" href="checkout.html">
+            <i class="fa-solid fa-bag-shopping"></i> Cart
+            <span class="cart-count">0</span>
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+      <!-- Checkout Hero Section -->
+      <section class="page-hero checkout-hero">
+        <div class="container">
+          <p class="eyebrow">ALMOST THERE</p>
+          <h1>Just a few steps<br />to <em>something delicious.</em></h1>
+          <p>Check your order details and let us know where to deliver.</p>
+        </div>
+      </section>
+
+      <!-- Cart and Checkout Layout Section -->
+      <section class="section container checkout-layout flex">
+        <!-- Cart Items Section -->
+        <div class="checkout-main">
+          <div class="checkout-panel">
+            <div class="panel-heading flex justify-between">
+              <h2>Your cart</h2>
+              <a href="menu.html" class="text-link"
+                >Add more <i class="fa-solid fa-plus"></i
+              ></a>
+            </div>
+            <div id="cart-items"></div>
+            <p class="empty-cart hidden" id="empty-cart">
+              Your cart is looking a little empty.
+              <a href="menu.html">Find something delicious.</a>
+            </p>
+          </div>
+
+          <!-- Delivery Details Form Section -->
+          <form class="checkout-panel customer-form" id="checkout-form">
+            <h2>Delivery details</h2>
+            <div class="form-row flex">
+              <label
+                >Full name<input
+                  name="customerName"
+                  required
+                  minlength="2"
+                  placeholder="Your full name" /></label
+              ><label
+                >Phone number<input
+                  name="phone"
+                  type="tel"
+                  required
+                  pattern="[0-9+\-\s]{10,15}"
+                  placeholder="+91 98765 43210"
+              /></label>
+            </div>
+            <label
+              >Email address<input
+                name="email"
+                type="email"
+                required
+                placeholder="you@example.com"
+            /></label>
+            <label
+              >Delivery address<textarea
+                name="address"
+                rows="3"
+                required
+                minlength="8"
+                placeholder="House / flat, street, area, city, PIN"
+              ></textarea>
+            </label>
+            <label
+              >Delivery instructions <span class="muted">(optional)</span
+              ><input
+                name="instructions"
+                placeholder="Landmark, gate code, etc."
+            /></label>
+
+            <!-- Payment Method Section -->
+            <h3>Payment method</h3>
+            <label class="payment-option"
+              ><input
+                type="radio"
+                name="payment"
+                value="Cash on delivery"
+                checked
+              />
+              <span
+                ><i class="fa-solid fa-money-bill-wave"></i> Cash on delivery
+                (demo)</span
+              ></label
+            >
+            <label class="payment-option"
+              ><input type="radio" name="payment" value="Online payment demo" />
+              <span
+                ><i class="fa-solid fa-credit-card"></i> Online payment (demo
+                only)</span
+              ></label
+            >
+
+            <!-- Demo Payment Notice Section -->
+            <p class="demo-note">
+              <i class="fa-solid fa-circle-info"></i> No real payment is
+              collected on this demonstration website.
+            </p>
+
+            <!-- Place Order Button Section -->
+            <button class="btn btn-primary place-order-btn" type="submit">
+              Place demo order <i class="fa-solid fa-arrow-right"></i>
+            </button>
+            <p class="form-feedback" id="checkout-feedback" role="status"></p>
+          </form>
+        </div>
+
+        <!-- Order Summary Section -->
+        <aside class="order-summary">
+          <h2>Order summary</h2>
+          <div class="summary-line">
+            <span>Subtotal</span><strong id="subtotal">₹0</strong>
+          </div>
+
+          <!-- Promo Code Section -->
+          <div class="coupon-area">
+            <label for="coupon-code">Promo code</label>
+            <div class="coupon-input flex">
+              <input id="coupon-code" placeholder="Try YEH10" /><button
+                id="apply-coupon"
+                type="button"
+              >
+                Apply
+              </button>
+            </div>
+            <p class="coupon-feedback" id="coupon-feedback"></p>
+          </div>
+
+          <!-- Order Price Breakdown Section -->
+          <div class="summary-line">
+            <span>Discount</span><strong id="discount">−₹0</strong>
+          </div>
+          <div class="summary-line">
+            <span>Delivery fee</span><strong id="delivery-fee">₹40</strong>
+          </div>
+          <div class="summary-line total-line">
+            <span>Total</span><strong id="grand-total">₹40</strong>
+          </div>
+          <p class="summary-footnote">
+            Delivery is free on orders of ₹499 or more.
+          </p>
+        </aside>
+      </section>
+
+      <!-- Order Confirmation Modal Section -->
+      <div
+        class="modal-backdrop hidden"
+        id="order-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="order-modal-title"
+      >
+        <div class="success-modal">
+          <button class="modal-close" id="close-order-modal" aria-label="Close">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          <div class="success-icon"><i class="fa-solid fa-check"></i></div>
+          <p class="eyebrow">ORDER RECEIVED</p>
+          <h2 id="order-modal-title">That's a good choice!</h2>
+          <p>
+            Your demo order reference is <strong id="order-number"></strong>.
+          </p>
+          <p class="muted">
+            This is a front-end demonstration. No restaurant has received this
+            order.
+          </p>
+          <a class="btn btn-primary" href="menu.html">Order more good stuff</a>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="site-footer">
+      <!-- Footer Main Content Section -->
+      <div class="container footer-main flex justify-between">
+        <div>
+          <a class="brand" href="index.html">Yeh <span>!</span></a>
+          <p>
+            Made in our kitchen,<br />
+            enjoyed wherever you are.
+          </p>
+        </div>
+
+        <!-- Footer Navigation Links Section -->
+        <div>
+          <h3>Explore</h3>
+          <a href="menu.html">Our menu</a>
+          <a href="about.html">Our story</a>
+          <a href="contact.html">Contact us</a>
+        </div>
+
+        <!-- Footer Contact Information Section -->
+        <div>
+          <h3>Get in touch</h3>
+          <a href="mailto:hello@yah.example">hello@yah.example</a>
+          <a href="tel:+911234567890">+91 12345 67890</a>
+          <span>Daily · 11 AM – 11 PM</span>
+        </div>
+
+        <!-- Footer Social Media Section -->
+        <div>
+          <h3>Follow the flavour</h3>
+
+          <div class="socials flex">
+            <a href="#" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a href="#" aria-label="Facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+
+            <a href="#" aria-label="TikTok">
+              <i class="fa-brands fa-tiktok"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Section -->
+      <div class="container footer-bottom flex justify-between">
+        <span>
+          © <span data-year></span> Yeh! Restaurant. All rights reserved.
+        </span>
+
+        <span>Made to make every moment special.</span>
+      </div>
+    </footer>
+  </body>
+</html>

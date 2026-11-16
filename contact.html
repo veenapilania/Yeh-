@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Yeh! — freshly prepared food, bold flavours and convenient delivery."
+    />
+    <title>Contact Us | Yeh!</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <script src="js/script.js" defer></script>
+  </head>
+
+  <body>
+    <!-- Header and Navigation Section -->
+    <header class="site-header">
+      <div class="container nav-wrap flex items-center justify-between">
+        <a class="brand" href="index.html" aria-label="Yeh! home">
+          Yeh <span>!</span>
+        </a>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Open navigation"
+          aria-expanded="false"
+          aria-controls="main-navigation"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <nav
+          class="main-nav flex items-center"
+          id="main-navigation"
+          aria-label="Main navigation"
+        >
+          <a href="index.html">Home</a>
+          <a href="menu.html">Menu</a>
+          <a href="about.html">Our story</a>
+          <a class="active" href="contact.html">Contact</a>
+
+          <a class="nav-cart" href="checkout.html">
+            <i class="fa-solid fa-bag-shopping"></i> Cart
+            <span class="cart-count">0</span>
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content Section -->
+
+    <main>
+      <!-- Contact Hero Section -->
+      <section class="page-hero contact-hero">
+        <div class="container">
+          <p class="eyebrow">WE'D LOVE TO HEAR FROM YOU</p>
+          <h1>Say <em>hello.</em></h1>
+          <p>Questions, feedback or just want to talk food? We're listening.</p>
+        </div>
+      </section>
+
+      <!-- Contact Details and Form Section -->
+      <section class="section container contact-layout flex">
+        <!-- Contact Information Section -->
+        <div class="contact-details">
+          <p class="eyebrow">GET IN TOUCH</p>
+          <h2>Have a question? <em>We're listening.</em></h2>
+          <p class="muted">
+            Our team is happy to help with menu questions, order queries and
+            feedback.
+          </p>
+          <div class="contact-detail">
+            <i class="fa-solid fa-phone"></i>
+            <div>
+              <strong>Call us</strong
+              ><a href="tel:+911234567890">+91 12345 67890</a>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <i class="fa-solid fa-envelope"></i>
+            <div>
+              <strong>Email us</strong
+              ><a href="mailto:hello@yah.example">hello@yah.example</a>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <i class="fa-solid fa-clock"></i>
+            <div>
+              <strong>Opening hours</strong
+              ><span>Every day · 11:00 AM – 11:00 PM</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Message Form Section -->
+        <form class="form-card" id="contact-form">
+          <h3>Drop us a message</h3>
+          <label
+            >Your name<input
+              name="name"
+              type="text"
+              placeholder="Your name"
+              required
+              minlength="2"
+          /></label>
+          <label
+            >Email address<input
+              name="email"
+              type="email"
+              placeholder="you@example.com"
+              required
+          /></label>
+          <label
+            >What's on your mind?<textarea
+              name="message"
+              rows="5"
+              placeholder="Write your message..."
+              required
+              minlength="10"
+            ></textarea>
+          </label>
+          <button class="btn btn-primary" type="submit">
+            Send message <i class="fa-solid fa-paper-plane"></i>
+          </button>
+          <p class="form-feedback" id="contact-feedback" role="status"></p>
+        </form>
+      </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="site-footer">
+      <!-- Footer Main Content Section -->
+      <div class="container footer-main flex justify-between">
+        <div>
+          <a class="brand" href="index.html">Yeh <span>!</span></a>
+          <p>
+            Made in our kitchen,<br />
+            enjoyed wherever you are.
+          </p>
+        </div>
+
+        <!-- Footer Navigation Links Section -->
+        <div>
+          <h3>Explore</h3>
+          <a href="menu.html">Our menu</a>
+          <a href="about.html">Our story</a>
+          <a href="contact.html">Contact us</a>
+        </div>
+
+        <!-- Footer Contact Information Section -->
+        <div>
+          <h3>Get in touch</h3>
+          <a href="mailto:hello@yah.example">hello@yah.example</a>
+          <a href="tel:+911234567890">+91 12345 67890</a>
+          <span>Daily · 11 AM – 11 PM</span>
+        </div>
+
+        <!-- Footer Social Media Section -->
+        <div>
+          <h3>Follow the flavour</h3>
+
+          <div class="socials flex">
+            <a href="#" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a href="#" aria-label="Facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+
+            <a href="#" aria-label="TikTok">
+              <i class="fa-brands fa-tiktok"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Section -->
+      <div class="container footer-bottom flex justify-between">
+        <span>
+          © <span data-year></span> Yeh! Restaurant. All rights reserved.
+        </span>
+
+        <span>Made to make every moment special.</span>
+      </div>
+    </footer>
+  </body>
+</html>

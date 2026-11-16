@@ -1,0 +1,231 @@
+@media (max-width: 900px) {
+  .main-nav {
+    gap: 20px;
+  }
+  .hero {
+    min-height: 600px;
+  }
+  .hero-sticker {
+    right: 5%;
+  }
+  .food-card {
+    flex-basis: calc(50% - 22px);
+  }
+  .menu-food-list .food-card {
+    flex-basis: calc(50% - 22px);
+  }
+  .story-layout,
+  .contact-layout {
+    gap: 38px;
+  }
+  .checkout-layout {
+    flex-direction: column;
+  }
+  .checkout-main,
+  .order-summary {
+    width: 100%;
+  }
+  .order-summary {
+    position: static;
+  }
+}
+@media (max-width: 680px) {
+  .container {
+    width: min(100% - 32px, 540px);
+  }
+  .section {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  .nav-wrap {
+    min-height: 70px;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  .main-nav {
+    display: none;
+    position: absolute;
+    top: 69px;
+    left: 0;
+    right: 0;
+    background: #151311;
+    border-bottom: 1px solid var(--line);
+    padding: 18px 22px 24px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+  .main-nav.open {
+    display: flex;
+  }
+  .main-nav > a {
+    padding: 13px 5px;
+    border-bottom: 1px solid var(--line);
+  }
+  .main-nav .nav-cart {
+    margin-top: 12px;
+    text-align: center;
+    border: 0;
+  }
+  .hero {
+    min-height: 630px;
+    background-position: 60% center;
+  }
+  .hero-shade {
+    background: linear-gradient(
+      90deg,
+      rgba(12, 11, 10, 0.94),
+      rgba(12, 11, 10, 0.58)
+    );
+  }
+  .hero-content {
+    padding-top: 35px;
+  }
+  .hero h1 {
+    font-size: clamp(3.2rem, 16vw, 5rem);
+  }
+  .hero-copy {
+    font-size: 0.98rem;
+  }
+  .hero-actions {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
+  }
+  .hero-note {
+    margin-top: 35px;
+  }
+  .hero-sticker {
+    width: 88px;
+    height: 88px;
+    right: 7%;
+    bottom: 7%;
+  }
+  .hero-sticker strong {
+    font-size: 1.35rem;
+  }
+  .promise-inner {
+    justify-content: flex-start;
+    padding: 20px 0;
+    gap: 18px 24px;
+  }
+  .promise-inner div {
+    width: calc(50% - 12px);
+    font-size: 0.8rem;
+  }
+  .section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
+  }
+  .desktop-link {
+    display: none;
+  }
+  .food-card,
+  .menu-food-list .food-card {
+    flex-basis: 100%;
+  }
+  .food-image-wrap {
+    height: 210px;
+  }
+  .promo {
+    flex-direction: column;
+  }
+  .promo-copy {
+    padding: 32px 25px;
+  }
+  .promo-image {
+    min-height: 240px;
+  }
+  .review-list,
+  .value-list {
+    flex-direction: column;
+  }
+  .footer-main {
+    flex-wrap: wrap;
+    gap: 32px 20px;
+  }
+  .footer-main > div {
+    flex: 1 1 calc(50% - 20px);
+  }
+  .footer-bottom {
+    gap: 8px;
+    flex-direction: column;
+  }
+  .page-hero {
+    padding: 75px 0;
+  }
+  .page-hero h1 {
+    font-size: clamp(2.9rem, 13vw, 4.2rem);
+  }
+  .menu-toolbar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+  .search-box {
+    max-width: none;
+  }
+  .sort-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .sort-box select {
+    flex: 1;
+    max-width: 70%;
+  }
+  .filter-row {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 8px;
+  }
+  .filter-chip {
+    white-space: nowrap;
+  }
+  .story-layout,
+  .contact-layout {
+    flex-direction: column;
+  }
+  .story-photo {
+    width: 100%;
+    min-height: 300px;
+  }
+  .story-copy {
+    width: 100%;
+  }
+  .cta-band {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 25px;
+    padding: 30px 24px;
+    margin-bottom: 65px;
+  }
+  .form-card {
+    width: 100%;
+    padding: 24px;
+  }
+  .checkout-panel,
+  .order-summary {
+    padding: 22px;
+  }
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+  .cart-row {
+    flex-wrap: wrap;
+  }
+  .cart-row-info {
+    flex-basis: calc(100% - 105px);
+  }
+  .quantity-control {
+    margin-left: 97px;
+  }
+  .remove-item {
+    margin-left: auto;
+  }
+  .mobile-full {
+    width: 100%;
+  }
+}
